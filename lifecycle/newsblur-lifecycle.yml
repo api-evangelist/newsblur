@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/newsblur-openapi.yml + https://www.newsblur.com/api
+versioning:
+  scheme: unversioned-path
+  current: null
+  docs: https://www.newsblur.com/api
+  notes: The HTTP API is served under stable un-versioned paths; no dated or numbered API version is published.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: >-
+    No formal deprecation policy or RFC 8594 Sunset/Deprecation header support is
+    documented. The API reference marks several older story-marking endpoints as
+    deprecated in favor of the story-hash variants.
+sla: null
+status_page: null
+status_page_notes: >-
+  No dedicated public status page was found (status.newsblur.com does not resolve;
+  newsblur.statuspage.io redirects to the Statuspage marketing site, i.e. unclaimed).
+deprecated_operations:
+  # Documented as deprecated in the NewsBlur API reference (older story-marking calls).
+  - path: /reader/mark_story_as_read
+    replaced_by: /reader/mark_story_hashes_as_read
+  - path: /reader/mark_feed_stories_as_read
+    replaced_by: /reader/mark_story_hashes_as_read
+  - path: /reader/mark_social_stories_as_read
+    replaced_by: /reader/mark_story_hashes_as_read

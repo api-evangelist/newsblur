@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: generated
+source: openapi/newsblur-openapi.yml
+skills:
+  - file: newsblur-read-and-triage.md
+    name: Read and triage your NewsBlur river
+    api: openapi/newsblur-openapi.yml
+    operations: [login, getFeeds, getRiverStories, getUnreadStoryHashes, markStoryHashesAsRead]
+  - file: newsblur-subscribe-and-organize.md
+    name: Subscribe to a feed and organize it
+    api: openapi/newsblur-openapi.yml
+    operations: [searchFeed, addUrl, addFolder, moveFeedToFolder, renameFeed]
+  - file: newsblur-save-and-share.md
+    name: Save and share a story to your blurblog
+    api: openapi/newsblur-openapi.yml
+    operations: [getFeedStories, markStoryHashAsStarred, shareStory, getPublicComments]

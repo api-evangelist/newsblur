@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: openapi/newsblur-openapi.yml
+docs: https://www.newsblur.com/api
+docs_notes: >-
+  The NewsBlur API reference documents two authentication paths: (1) a session cookie
+  (`newsblur_sessionid`) obtained via POST /api/login, and (2) OAuth 2.0 with a bearer
+  token in the Authorization header. OAuth client credentials are issued by NewsBlur
+  (contact samuel@newsblur.com). The same OAuth flow authorizes the hosted MCP server
+  at https://newsblur.com/mcp/ via a browser login-and-authorize step.
+summary:
+  types:
+  - apiKey
+  - http
+  api_key_in:
+  - cookie
+schemes:
+- name: cookieAuth
+  type: apiKey
+  in: cookie
+  parameter: newsblur_sessionid
+  description: Session cookie set by POST /api/login.
+  sources:
+  - openapi/newsblur-openapi.yml
+- name: oauth2Bearer
+  type: http
+  scheme: bearer
+  description: OAuth 2.0 access token passed as a Bearer token in the Authorization header.
+    Client credentials are issued by NewsBlur (contact samuel@newsblur.com).
+  sources:
+  - openapi/newsblur-openapi.yml

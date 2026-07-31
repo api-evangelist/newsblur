@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/newsblur-openapi.yml + https://www.newsblur.com/api
+authentication:
+  styles: [session-cookie, oauth2-bearer]
+  cookie: newsblur_sessionid
+  bearer: Authorization Bearer <access_token>
+  ref: authentication/newsblur-authentication.yml
+idempotency:
+  supported: false
+  notes: >-
+    NewsBlur documents no Idempotency-Key header or idempotency-key mechanism. Several
+    state-setting operations (mark_story_hashes_as_read, mark_story_hash_as_starred,
+    mark_feed_as_read) are naturally idempotent by design, but there is no explicit
+    idempotency contract, so no `Idempotency` pointer is emitted.
+pagination:
+  style: page-number
+  params: [page]
+  notes: >-
+    Story-listing endpoints (reader/feed/{id}, reader/river_stories, social/river_stories)
+    accept a `page` query parameter for sequential paging.
+error_envelope:
+  shape: custom
+  fields:
+    result: >-
+      String "ok" on success or "error" on failure.
+    errors: >-
+      Object/map of field-specific error messages when a request is invalid.
+    code: Optional integer status code echoed on some errors.
+  format: not-rfc9457
+  ref: errors/newsblur-problem-types.yml
+content_negotiation:
+  request: form-encoded (application/x-www-form-urlencoded) for POST operations
+  response: application/json
+versioning:
+  scheme: unversioned-path
+  notes: The API is served under stable un-versioned paths (/reader, /social, /rss_feeds, /import).
+  ref: lifecycle/newsblur-lifecycle.yml
+rate_limiting:
+  documented: false
+  notes: No published rate-limit headers or quotas found in the API reference.

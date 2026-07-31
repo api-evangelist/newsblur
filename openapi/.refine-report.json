@@ -1,0 +1,26 @@
+{
+  "provider": "newsblur",
+  "sources": [
+    "newsblur-authentication-api-openapi.yml",
+    "newsblur-classifiers-api-openapi.yml",
+    "newsblur-feed-management-api-openapi.yml",
+    "newsblur-feeds-api-openapi.yml",
+    "newsblur-import-export-api-openapi.yml",
+    "newsblur-social-api-openapi.yml",
+    "newsblur-stories-api-openapi.yml"
+  ],
+  "outputs": [
+    "newsblur-authentication-api-openapi.yml",
+    "newsblur-classifiers-api-openapi.yml",
+    "newsblur-feed-management-api-openapi.yml",
+    "newsblur-feeds-api-openapi.yml",
+    "newsblur-import-export-api-openapi.yml",
+    "newsblur-social-api-openapi.yml",
+    "newsblur-stories-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

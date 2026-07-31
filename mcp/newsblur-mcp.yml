@@ -1,0 +1,44 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/samuelclay/NewsBlur/blob/master/README.md
+status: published
+description: >-
+  NewsBlur ships an official hosted Model Context Protocol (MCP) server that lets AI
+  agents (Claude Desktop, Claude Code, Cursor, or any MCP-compatible client) interact
+  with a user's feeds, stories and classifiers. On first use a browser window opens to
+  log in to NewsBlur and authorize access (OAuth). Self-hosted NewsBlur runs the MCP
+  server as a separate container on port 8099 at https://<your-newsblur-domain>/mcp/.
+server:
+  name: newsblur
+  transport: http
+  url: https://newsblur.com/mcp/
+  auth: oauth
+install:
+  claude_code: claude mcp add --transport http newsblur https://newsblur.com/mcp/
+  codex: |
+    [mcp_servers.newsblur]
+    url = "https://newsblur.com/mcp"
+tools:
+  # ~15 tools are exposed; the following are named in the provider README.
+  - name: newsblur_list_feeds
+    description: List the user's subscribed feeds with unread counts.
+    source_operation: openapi/newsblur-openapi.yml#getFeeds
+  - name: newsblur_get_stories
+    description: Get stories for a feed or the multi-feed river.
+    source_operation: openapi/newsblur-openapi.yml#getRiverStories
+  - name: newsblur_search_stories
+    description: Search stories.
+    source_operation: openapi/newsblur-openapi.yml#getFeedStories
+  - name: newsblur_save_story
+    description: Save (star) a story.
+    source_operation: openapi/newsblur-openapi.yml#markStoryHashAsStarred
+  - name: newsblur_train_classifier
+    description: Train the intelligence classifier for a feed.
+    source_operation: openapi/newsblur-openapi.yml#saveClassifier
+  - name: newsblur_discover_feeds
+    description: Discover and search for new feeds.
+    source_operation: openapi/newsblur-openapi.yml#searchFeed
+notes: >-
+  Tool list is partial: the README states "15 tools" and names the six above. The
+  live server at https://newsblur.com/mcp/ returns HTTP 401 without an authorized
+  session (confirmed 2026-07-20), consistent with the documented OAuth browser flow.

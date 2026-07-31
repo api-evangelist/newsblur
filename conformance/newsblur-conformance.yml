@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/newsblur-openapi.yml + https://www.newsblur.com/api
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: API supports OAuth 2.0 bearer-token authorization (also drives the MCP server authorize flow).
+  - id: oidc
+    conforms: false
+    evidence: No OpenID Connect discovery (/.well-known/openid-configuration returns 404).
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use a custom {result, errors} envelope, not application/problem+json.
+  - id: rss-atom
+    conforms: true
+    evidence: NewsBlur is an RSS/Atom aggregator and also emits blurblog RSS feeds.
+  - id: opml
+    conforms: true
+    evidence: Subscriptions import/export via OPML (import/opml_export, import/opml_upload).
+  - id: mcp
+    conforms: true
+    evidence: Official hosted Model Context Protocol server at https://newsblur.com/mcp/.
+  - id: pagination
+    conforms: true
+    evidence: Story listings paginate via a page-number query parameter.
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: No /.well-known/security.txt published (404).

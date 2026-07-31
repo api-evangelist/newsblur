@@ -1,8 +1,27 @@
 aid: newsblur
 name: NewsBlur
-description: NewsBlur is a company surfaced as a portfolio company of a16z, y-combinator and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  NewsBlur is a personal news reader that brings people together to talk about the
+  world. It is an RSS/Atom feed aggregator with training-based intelligence (hide or
+  highlight stories per feed), original-site and original-text views, saved (starred)
+  stories, folders, OPML import/export, and a social layer of shareable "blurblogs"
+  with following, comments and likes. NewsBlur is open source (MIT, github.com/samuelclay/NewsBlur),
+  runs native iOS, macOS and Android apps, and exposes a documented HTTP API plus an
+  official hosted Model Context Protocol (MCP) server at newsblur.com/mcp for AI agents.
+  This profile captures NewsBlur's public API surface for the API Evangelist network.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.newsblur.com/media/img/logo_512.png
 url: https://raw.githubusercontent.com/api-evangelist/newsblur/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -13,12 +32,211 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- RSS
+- News
+- Feed Reader
+- Aggregator
+- Social
+- Content
+- Media
+- Open Source
+- MCP
+apis:
+- aid: newsblur:newsblur-authentication-api
+  name: NewsBlur authentication API
+  description: Login, logout and signup.
+  humanURL: https://www.newsblur.com/api
+  baseURL: https://www.newsblur.com
+  tags:
+  - authentication
+  properties:
+  - type: OpenAPI
+    url: openapi/newsblur-authentication-api-openapi.yml
+  - type: Authentication
+    url: authentication/newsblur-authentication.yml
+  - type: Conventions
+    url: conventions/newsblur-conventions.yml
+  - type: ErrorCatalog
+    url: errors/newsblur-problem-types.yml
+  - type: DataModel
+    url: data-model/newsblur-data-model.yml
+  - type: Conformance
+    url: conformance/newsblur-conformance.yml
+- aid: newsblur:newsblur-classifiers-api
+  name: NewsBlur classifiers API
+  description: Intelligence training classifiers.
+  humanURL: https://www.newsblur.com/api
+  baseURL: https://www.newsblur.com
+  tags:
+  - classifiers
+  properties:
+  - type: OpenAPI
+    url: openapi/newsblur-classifiers-api-openapi.yml
+  - type: Authentication
+    url: authentication/newsblur-authentication.yml
+  - type: Conventions
+    url: conventions/newsblur-conventions.yml
+  - type: ErrorCatalog
+    url: errors/newsblur-problem-types.yml
+  - type: DataModel
+    url: data-model/newsblur-data-model.yml
+  - type: Conformance
+    url: conformance/newsblur-conformance.yml
+- aid: newsblur:newsblur-feed-management-api
+  name: NewsBlur feed-management API
+  description: Subscriptions, folders and organization.
+  humanURL: https://www.newsblur.com/api
+  baseURL: https://www.newsblur.com
+  tags:
+  - feed-management
+  properties:
+  - type: OpenAPI
+    url: openapi/newsblur-feed-management-api-openapi.yml
+  - type: Authentication
+    url: authentication/newsblur-authentication.yml
+  - type: Conventions
+    url: conventions/newsblur-conventions.yml
+  - type: ErrorCatalog
+    url: errors/newsblur-problem-types.yml
+  - type: DataModel
+    url: data-model/newsblur-data-model.yml
+  - type: Conformance
+    url: conformance/newsblur-conformance.yml
+- aid: newsblur:newsblur-feeds-api
+  name: NewsBlur feeds API
+  description: Feed subscription, search and metadata.
+  humanURL: https://www.newsblur.com/api
+  baseURL: https://www.newsblur.com
+  tags:
+  - feeds
+  properties:
+  - type: OpenAPI
+    url: openapi/newsblur-feeds-api-openapi.yml
+  - type: Authentication
+    url: authentication/newsblur-authentication.yml
+  - type: Conventions
+    url: conventions/newsblur-conventions.yml
+  - type: ErrorCatalog
+    url: errors/newsblur-problem-types.yml
+  - type: DataModel
+    url: data-model/newsblur-data-model.yml
+  - type: Conformance
+    url: conformance/newsblur-conformance.yml
+- aid: newsblur:newsblur-import-export-api
+  name: NewsBlur import-export API
+  description: OPML import and export.
+  humanURL: https://www.newsblur.com/api
+  baseURL: https://www.newsblur.com
+  tags:
+  - import-export
+  properties:
+  - type: OpenAPI
+    url: openapi/newsblur-import-export-api-openapi.yml
+  - type: Authentication
+    url: authentication/newsblur-authentication.yml
+  - type: Conventions
+    url: conventions/newsblur-conventions.yml
+  - type: ErrorCatalog
+    url: errors/newsblur-problem-types.yml
+  - type: DataModel
+    url: data-model/newsblur-data-model.yml
+  - type: Conformance
+    url: conformance/newsblur-conformance.yml
+- aid: newsblur:newsblur-social-api
+  name: NewsBlur social API
+  description: Blurblogs, sharing, following and comments.
+  humanURL: https://www.newsblur.com/api
+  baseURL: https://www.newsblur.com
+  tags:
+  - social
+  properties:
+  - type: OpenAPI
+    url: openapi/newsblur-social-api-openapi.yml
+  - type: Authentication
+    url: authentication/newsblur-authentication.yml
+  - type: Conventions
+    url: conventions/newsblur-conventions.yml
+  - type: ErrorCatalog
+    url: errors/newsblur-problem-types.yml
+  - type: DataModel
+    url: data-model/newsblur-data-model.yml
+  - type: Conformance
+    url: conformance/newsblur-conformance.yml
+- aid: newsblur:newsblur-stories-api
+  name: NewsBlur stories API
+  description: Reading, marking and starring stories.
+  humanURL: https://www.newsblur.com/api
+  baseURL: https://www.newsblur.com
+  tags:
+  - stories
+  properties:
+  - type: OpenAPI
+    url: openapi/newsblur-stories-api-openapi.yml
+  - type: Authentication
+    url: authentication/newsblur-authentication.yml
+  - type: Conventions
+    url: conventions/newsblur-conventions.yml
+  - type: ErrorCatalog
+    url: errors/newsblur-problem-types.yml
+  - type: DataModel
+    url: data-model/newsblur-data-model.yml
+  - type: Conformance
+    url: conformance/newsblur-conformance.yml
+common:
+- type: DeveloperPortal
+  url: https://www.newsblur.com/api
+- type: Documentation
+  url: https://www.newsblur.com/api
+- type: APIReference
+  url: https://www.newsblur.com/api
+- type: GitHubOrganization
+  url: https://github.com/samuelclay/NewsBlur
+- type: Support
+  url: https://forum.newsblur.com
+- type: Blog
+  url: https://blog.newsblur.com
+- type: PrivacyPolicy
+  url: https://www.newsblur.com/privacy
+- type: TermsOfService
+  url: https://www.newsblur.com/tos
+- type: SignUp
+  url: https://www.newsblur.com/
+- type: MCPServer
+  url: mcp/newsblur-mcp.yml
+- type: Authentication
+  url: authentication/newsblur-authentication.yml
+- type: Conventions
+  url: conventions/newsblur-conventions.yml
+- type: Packages
+  url: packages/newsblur-packages.yml
+- type: LLMsTxt
+  url: llms/newsblur-llms.txt
+- type: WellKnown
+  url: well-known/newsblur-well-known.yml
+- type: Lifecycle
+  url: lifecycle/newsblur-lifecycle.yml
+- type: DomainSecurity
+  url: security/newsblur-domain-security.yml
+- type: DataModel
+  url: data-model/newsblur-data-model.yml
+- type: ErrorCatalog
+  url: errors/newsblur-problem-types.yml
+- type: Conformance
+  url: conformance/newsblur-conformance.yml
+- type: Overlay
+  url: overlays/newsblur-openapi-overlay.yaml
+- type: AgentSkill
+  url: skills/_index.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 17
+  pass: local-v1

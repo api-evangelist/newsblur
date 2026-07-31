@@ -1,0 +1,24 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for NewsBlur
+  version: 1.0.0
+extends: openapi/newsblur-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-enriched: '2026-07-20'
+      x-apievangelist-source: https://www.newsblur.com/api
+      x-mcp-server: https://newsblur.com/mcp/
+  - target: $.info
+    update:
+      x-artifacts:
+        authentication: authentication/newsblur-authentication.yml
+        conventions: conventions/newsblur-conventions.yml
+        errors: errors/newsblur-problem-types.yml
+        data-model: data-model/newsblur-data-model.yml
+        conformance: conformance/newsblur-conformance.yml
+        mcp: mcp/newsblur-mcp.yml
+  - target: $.tags
+    update:
+      - name: authentication
+        x-note: Session-cookie or OAuth 2.0 bearer.

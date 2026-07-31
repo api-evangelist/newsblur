@@ -1,0 +1,65 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/newsblur-openapi.yml + https://www.newsblur.com/api
+entities:
+  - name: User
+    description: A NewsBlur account with a public social profile (blurblog).
+    identifier: user_id
+  - name: Feed
+    description: A subscribed RSS/Atom feed with unread counts, favicon and statistics.
+    identifier: feed_id (integer)
+  - name: Folder
+    description: A named container that groups feeds; folders can nest.
+    identifier: folder (name)
+  - name: Story
+    description: An individual item from a feed; addressed by story_hash (feed_id:story_id).
+    identifier: story_hash
+  - name: Classifier
+    description: Per-feed intelligence training (like/dislike on authors, tags, titles, feeds).
+    identifier: feed_id
+  - name: SharedStory
+    description: A story shared to a user's blurblog, optionally with a comment.
+    identifier: story_hash + user_id
+  - name: Comment
+    description: A public comment/reply on a shared story, likeable by other users.
+    identifier: comment_id
+relationships:
+  - from: User
+    to: Feed
+    type: has_many
+    via: subscriptions
+  - from: Folder
+    to: Feed
+    type: has_many
+    via: folder membership
+  - from: Feed
+    to: Story
+    type: has_many
+    via: feed_id
+  - from: Story
+    to: Feed
+    type: belongs_to
+    via: story_hash (feed_id prefix)
+  - from: Classifier
+    to: Feed
+    type: belongs_to
+    via: feed_id
+  - from: User
+    to: SharedStory
+    type: has_many
+    via: blurblog
+  - from: SharedStory
+    to: Story
+    type: belongs_to
+    via: story_hash
+  - from: SharedStory
+    to: Comment
+    type: has_many
+    via: comments
+  - from: User
+    to: User
+    type: has_many
+    via: following / followers
+id_conventions:
+  story_hash: "<feed_id>:<story_id> — feeds resolve from the numeric prefix."
+  feed_id: Integer assigned by NewsBlur when a feed is first subscribed.

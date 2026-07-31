@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/newsblur-openapi.yml
+format: custom
+envelope:
+  result: '"ok" | "error"'
+  errors: 'map of field -> message (on validation failure)'
+notes: >-
+  NewsBlur does not use RFC 9457 application/problem+json. Failures are returned as a
+  JSON object with result="error" and an optional per-field `errors` map. The entries
+  below are derived from the documented HTTP status responses in the generated OpenAPI.
+problems:
+  - status: 400
+    title: Bad request
+    meaning: Invalid or missing parameters (e.g. bad feed URL on add_url, malformed signup).
+    source_operations:
+      - openapi/newsblur-openapi.yml#signup
+      - openapi/newsblur-openapi.yml#addUrl
+  - status: 401
+    title: Unauthorized
+    meaning: Authentication required or invalid credentials / expired session.
+    source_operations:
+      - openapi/newsblur-openapi.yml#login
+      - openapi/newsblur-openapi.yml#getFeeds
+  - status: 404
+    title: Not found
+    meaning: Referenced feed, story, folder, or profile does not exist.
+    source_operations:
+      - openapi/newsblur-openapi.yml#getFeedStories
+      - openapi/newsblur-openapi.yml#getFeedPage
+      - openapi/newsblur-openapi.yml#getFeedStatistics

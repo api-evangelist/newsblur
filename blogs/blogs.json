@@ -1,0 +1,14 @@
+{
+  "repo": "newsblur",
+  "feeds": [
+    {
+      "source": "https://forum.newsblur.com",
+      "feed_url": "https://forum.newsblur.com/posts.rss",
+      "title": "",
+      "saved": 9,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 9,
+  "fetched": "2026-07-25T15:00:33Z"
+}

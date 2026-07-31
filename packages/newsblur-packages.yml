@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: derived
+source: https://github.com/samuelclay/NewsBlur
+notes: >-
+  NewsBlur is an open-source monorepo (MIT). The first-party client software ships as
+  native applications and the full server/client source, not as published client-library
+  SDK packages on npm/PyPI/etc. No first-party API client SDK was found on the public
+  package registries (npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems, Packagist,
+  crates.io); the community maintains third-party clients but none are provider-published.
+  The official distributions below are therefore recorded as applications + source, and
+  no `SDKs` pointer is emitted (no first-party client library to count).
+packages:
+  - kind: source
+    language: python
+    registry: github
+    name: samuelclay/NewsBlur
+    url: https://github.com/samuelclay/NewsBlur
+    official: true
+  - kind: application
+    platform: ios
+    registry: app-store
+    name: NewsBlur (iOS)
+    url: https://apps.apple.com/app/newsblur/id463981119
+    official: true
+  - kind: application
+    platform: android
+    registry: google-play
+    name: NewsBlur (Android)
+    url: https://play.google.com/store/apps/details?id=com.newsblur
+    official: true
+  - kind: application
+    platform: android
+    registry: f-droid
+    name: NewsBlur (F-Droid)
+    url: https://f-droid.org/packages/com.newsblur/
+    official: true
