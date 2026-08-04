@@ -2,13 +2,20 @@
   "repo": "newsblur",
   "feeds": [
     {
+      "source": "https://forum.newsblur.com/posts.rss",
+      "feed_url": "https://forum.newsblur.com/posts.rss",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://forum.newsblur.com",
       "feed_url": "https://forum.newsblur.com/posts.rss",
       "title": "",
-      "saved": 9,
+      "saved": 0,
       "method": "discovered"
     }
   ],
-  "post_count": 9,
-  "fetched": "2026-07-25T15:00:33Z"
+  "post_count": 21,
+  "fetched": "2026-08-01T15:49:00Z"
 }
