@@ -1,0 +1,203 @@
+{
+  "item": [
+    {
+      "id": "c960041b-fafc-4b55-9d80-bec487aad133",
+      "name": "import-export",
+      "description": {
+        "content": "OPML import and export.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b4f2dbc7-a6d2-40c8-895b-2be1b14663a4",
+          "name": "Download subscriptions as an OPML backup",
+          "request": {
+            "name": "Download subscriptions as an OPML backup",
+            "description": {},
+            "url": {
+              "path": [
+                "import",
+                "opml_export"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "beaea37a-bd0d-481d-bc6a-0da69225d452",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "import",
+                    "opml_export"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "268bccdd-bd74-4a8c-b070-86c9d4a4fcfd",
+          "name": "Upload an OPML file to import subscriptions",
+          "request": {
+            "name": "Upload an OPML file to import subscriptions",
+            "description": {},
+            "url": {
+              "path": [
+                "import",
+                "opml_upload"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8c47941e-b4ec-4b20-8826-cd2ca30f7df8",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "import",
+                    "opml_upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.newsblur.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "newsblur_sessionid"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "06a22969-e2d8-485d-927f-7341ce21d81b",
+    "name": "NewsBlur authentication import-export API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "NewsBlur is a personal news reader (RSS/Atom aggregator) that brings people together to talk about the world. The HTTP API exposes account, feed, story, social (\"blurblog\"), intelligence-classifier, and OPML import/export operations. This OpenAPI description was generated by API Evangelist from the publicly documented endpoint reference at https://www.newsblur.com/api and the open-source NewsBlur codebase (github.com/samuelclay/NewsBlur). It is a faithful structuring of the documented surface, not a provider-published spec.\n\nContact Support:\n Name: NewsBlur\n Email: samuel@newsblur.com",
+      "type": "text/plain"
+    }
+  }
+}

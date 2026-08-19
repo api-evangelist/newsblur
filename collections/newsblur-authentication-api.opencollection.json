@@ -1,0 +1,59 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NewsBlur authentication API",
+    "version": "2026.07"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "newsblur_sessionid",
+      "value": "{{newsblur_sessionid}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "authentication",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Authenticate an existing user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/api/login"
+          },
+          "docs": "Log in with username and password; sets the newsblur_sessionid cookie."
+        },
+        {
+          "info": {
+            "name": "End the current session",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/api/logout"
+          },
+          "docs": "End the current session"
+        },
+        {
+          "info": {
+            "name": "Register a new account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/api/signup"
+          },
+          "docs": "Register a new account"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

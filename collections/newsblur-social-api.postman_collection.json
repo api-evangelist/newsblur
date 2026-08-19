@@ -1,0 +1,1512 @@
+{
+  "item": [
+    {
+      "id": "15f5f3f8-322a-4bf8-ba05-15b9cb92669a",
+      "name": "social",
+      "description": {
+        "content": "Blurblogs, sharing, following and comments.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "268a0ef7-ae31-4b7a-b6d8-e6fc6bfdecc9",
+          "name": "Stories from followed users",
+          "request": {
+            "name": "Stories from followed users",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "river_stories"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4bf329b8-7189-4c52-b139-0ccf5c79c241",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "river_stories"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4eb32060-8c58-4e10-9a83-07d753f05cfe",
+          "name": "Share a story with optional comment",
+          "request": {
+            "name": "Share a story with optional comment",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "share_story"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9f4c44cb-318e-4c33-b3ff-17512ac8b913",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "share_story"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f864a150-d77d-4bdf-8188-5601dff13e1c",
+          "name": "Remove a shared story",
+          "request": {
+            "name": "Remove a shared story",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "unshare_story"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bd207d14-563b-41b5-8f46-99d9f81ab18f",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "unshare_story"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ba731eaa-31ae-4bd5-be1d-37fbafbbd63c",
+          "name": "Followers and following profiles",
+          "request": {
+            "name": "Followers and following profiles",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "load_user_friends"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "842985e7-cae0-4301-9c5d-386849020ca2",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "load_user_friends"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "592beed8-0bfe-4c3e-9783-e7e37f85e5a2",
+          "name": "A user's public profile",
+          "request": {
+            "name": "A user's public profile",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "profile"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a8d38467-b3f1-4163-8811-a5203c320b22",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "profile"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c07a5c5b-47ee-4a9b-a6de-f2522ef27067",
+          "name": "The current user's private profile details",
+          "request": {
+            "name": "The current user's private profile details",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "load_user_profile"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b9c26934-14f1-454d-b4cd-7da6133a78ba",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "load_user_profile"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "51b19141-3523-407b-b198-a2afe08095a5",
+          "name": "Update profile information",
+          "request": {
+            "name": "Update profile information",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "save_user_profile"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f0eeb7c6-945b-4c33-8e91-1cc563308561",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "save_user_profile"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6fd04653-aa0a-4c33-9451-05b8fb1c5c9a",
+          "name": "User interactions",
+          "request": {
+            "name": "User interactions",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "interactions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c1acfa3f-5285-496a-be06-c13b17dccdc1",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "interactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1d16df2c-7d70-4562-a6e3-21597d67fea1",
+          "name": "User activity feed",
+          "request": {
+            "name": "User activity feed",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "activities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2259c3b9-54b8-4b66-ab46-7bb24a5bd653",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "activities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9853de5b-05b3-492f-9e78-e20b0450e16c",
+          "name": "Follow a user's blurblog",
+          "request": {
+            "name": "Follow a user's blurblog",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "follow"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ef1bf8aa-b1e5-4bba-84b7-7f5b66e0feb2",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "follow"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6ee872b2-ed4c-4aee-87df-5585261a676b",
+          "name": "Unfollow a user",
+          "request": {
+            "name": "Unfollow a user",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "unfollow"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f375ce03-30d0-4c29-9616-4f154e9df387",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "unfollow"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b04d71fd-081f-4efb-b227-45fcf3a58995",
+          "name": "Mute a user's content",
+          "request": {
+            "name": "Mute a user's content",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "mute_user"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5816adc5-e95a-414b-ac0f-7ff84dbf1d04",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "mute_user"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "12d2aac0-74c1-4a56-981b-8c0324f4cb7c",
+          "name": "Restore a muted user's visibility",
+          "request": {
+            "name": "Restore a muted user's visibility",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "unmute_user"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8d025fac-5440-4cf6-88bd-33b15eb37622",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "unmute_user"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e15f0a3e-8c38-470d-a1e3-178484773774",
+          "name": "Public comments on a story",
+          "request": {
+            "name": "Public comments on a story",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "public_comments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c8f00456-e4da-43d4-9a30-ac356d1d2c79",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "public_comments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "864e35e7-ec5c-4f67-9846-0c4615aa83f6",
+          "name": "Add a reply to a comment",
+          "request": {
+            "name": "Add a reply to a comment",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "save_comment_reply"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5831b3fe-2858-4c55-b4b4-1d4417980122",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "save_comment_reply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "764a73f0-fa74-454c-820d-ec202ed806cb",
+          "name": "Delete a comment reply",
+          "request": {
+            "name": "Delete a comment reply",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "remove_comment_reply"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bdd9033c-6d50-4909-bad9-99363d726627",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "remove_comment_reply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "87de60c0-3d80-4e8a-8b71-c6aa8352b2e7",
+          "name": "Favorite a comment",
+          "request": {
+            "name": "Favorite a comment",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "like_comment"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fcb84947-8714-4b05-8fb2-f85e4e234ed0",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "like_comment"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4984b84a-4298-4bbd-8d49-0256f48b2781",
+          "name": "Unfavorite a comment",
+          "request": {
+            "name": "Unfavorite a comment",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "remove_like_comment"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0773a671-d959-4dc9-a200-bce18888d42e",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "remove_like_comment"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "491961bf-12ca-494d-bc87-f907c7595ce1",
+          "name": "Search for users",
+          "request": {
+            "name": "Search for users",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "find_friends"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "60e3e224-bc09-4807-8e75-ea8d13db4780",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "find_friends"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.newsblur.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "newsblur_sessionid"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d484fbb7-29c3-401f-89f9-846cdc5b4da8",
+    "name": "NewsBlur authentication social API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "NewsBlur is a personal news reader (RSS/Atom aggregator) that brings people together to talk about the world. The HTTP API exposes account, feed, story, social (\"blurblog\"), intelligence-classifier, and OPML import/export operations. This OpenAPI description was generated by API Evangelist from the publicly documented endpoint reference at https://www.newsblur.com/api and the open-source NewsBlur codebase (github.com/samuelclay/NewsBlur). It is a faithful structuring of the documented surface, not a provider-published spec.\n\nContact Support:\n Name: NewsBlur\n Email: samuel@newsblur.com",
+      "type": "text/plain"
+    }
+  }
+}

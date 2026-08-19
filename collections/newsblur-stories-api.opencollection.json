@@ -1,0 +1,218 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NewsBlur authentication stories API",
+    "version": "2026.07"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "newsblur_sessionid",
+      "value": "{{newsblur_sessionid}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "stories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Stories from a single feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/reader/feed/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Stories from a single feed"
+        },
+        {
+          "info": {
+            "name": "Stories across multiple feeds (the \"river\")",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/reader/river_stories",
+            "params": [
+              {
+                "name": "feeds",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Stories across multiple feeds (the \"river\")"
+        },
+        {
+          "info": {
+            "name": "The user's saved (starred) stories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/reader/starred_stories"
+          },
+          "docs": "The user's saved (starred) stories"
+        },
+        {
+          "info": {
+            "name": "Identifiers of saved stories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/reader/starred_story_hashes"
+          },
+          "docs": "Identifiers of saved stories"
+        },
+        {
+          "info": {
+            "name": "Identifiers of unread stories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/reader/unread_story_hashes"
+          },
+          "docs": "Identifiers of unread stories"
+        },
+        {
+          "info": {
+            "name": "Previously read stories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/reader/read_stories"
+          },
+          "docs": "Previously read stories"
+        },
+        {
+          "info": {
+            "name": "Extracted original story text",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/rss_feeds/original_text",
+            "params": [
+              {
+                "name": "story_hash",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Extracted original story text"
+        },
+        {
+          "info": {
+            "name": "Original website content for a story",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/rss_feeds/original_story",
+            "params": [
+              {
+                "name": "story_hash",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Original website content for a story"
+        },
+        {
+          "info": {
+            "name": "Mark multiple stories as read",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/reader/mark_story_hashes_as_read"
+          },
+          "docs": "Mark multiple stories as read"
+        },
+        {
+          "info": {
+            "name": "Mark a story as unread",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/reader/mark_story_hash_as_unread"
+          },
+          "docs": "Mark a story as unread"
+        },
+        {
+          "info": {
+            "name": "Save (star) a story",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/reader/mark_story_hash_as_starred"
+          },
+          "docs": "Save (star) a story"
+        },
+        {
+          "info": {
+            "name": "Unsave (unstar) a story",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/reader/mark_story_hash_as_unstarred"
+          },
+          "docs": "Unsave (unstar) a story"
+        },
+        {
+          "info": {
+            "name": "Mark an entire feed as read",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/reader/mark_feed_as_read"
+          },
+          "docs": "Mark an entire feed as read"
+        },
+        {
+          "info": {
+            "name": "Mark everything as read",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/reader/mark_all_as_read"
+          },
+          "docs": "Mark everything as read"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

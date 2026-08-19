@@ -1,0 +1,235 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NewsBlur authentication social API",
+    "version": "2026.07"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "newsblur_sessionid",
+      "value": "{{newsblur_sessionid}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "social",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Stories from followed users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/social/river_stories"
+          },
+          "docs": "Stories from followed users"
+        },
+        {
+          "info": {
+            "name": "Share a story with optional comment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/social/share_story"
+          },
+          "docs": "Share a story with optional comment"
+        },
+        {
+          "info": {
+            "name": "Remove a shared story",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/social/unshare_story"
+          },
+          "docs": "Remove a shared story"
+        },
+        {
+          "info": {
+            "name": "Followers and following profiles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/social/load_user_friends"
+          },
+          "docs": "Followers and following profiles"
+        },
+        {
+          "info": {
+            "name": "A user's public profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/social/profile"
+          },
+          "docs": "A user's public profile"
+        },
+        {
+          "info": {
+            "name": "The current user's private profile details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/social/load_user_profile"
+          },
+          "docs": "The current user's private profile details"
+        },
+        {
+          "info": {
+            "name": "Update profile information",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/social/save_user_profile"
+          },
+          "docs": "Update profile information"
+        },
+        {
+          "info": {
+            "name": "User interactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/social/interactions"
+          },
+          "docs": "User interactions"
+        },
+        {
+          "info": {
+            "name": "User activity feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/social/activities"
+          },
+          "docs": "User activity feed"
+        },
+        {
+          "info": {
+            "name": "Follow a user's blurblog",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/social/follow"
+          },
+          "docs": "Follow a user's blurblog"
+        },
+        {
+          "info": {
+            "name": "Unfollow a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/social/unfollow"
+          },
+          "docs": "Unfollow a user"
+        },
+        {
+          "info": {
+            "name": "Mute a user's content",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/social/mute_user"
+          },
+          "docs": "Mute a user's content"
+        },
+        {
+          "info": {
+            "name": "Restore a muted user's visibility",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/social/unmute_user"
+          },
+          "docs": "Restore a muted user's visibility"
+        },
+        {
+          "info": {
+            "name": "Public comments on a story",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/social/public_comments"
+          },
+          "docs": "Public comments on a story"
+        },
+        {
+          "info": {
+            "name": "Add a reply to a comment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/social/save_comment_reply"
+          },
+          "docs": "Add a reply to a comment"
+        },
+        {
+          "info": {
+            "name": "Delete a comment reply",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/social/remove_comment_reply"
+          },
+          "docs": "Delete a comment reply"
+        },
+        {
+          "info": {
+            "name": "Favorite a comment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/social/like_comment"
+          },
+          "docs": "Favorite a comment"
+        },
+        {
+          "info": {
+            "name": "Unfavorite a comment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/social/remove_like_comment"
+          },
+          "docs": "Unfavorite a comment"
+        },
+        {
+          "info": {
+            "name": "Search for users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/social/find_friends"
+          },
+          "docs": "Search for users"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

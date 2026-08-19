@@ -1,0 +1,77 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NewsBlur authentication classifiers API",
+    "version": "2026.07"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "newsblur_sessionid",
+      "value": "{{newsblur_sessionid}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "classifiers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get intelligence classifiers for all feeds",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/reader/feeds_trainer"
+          },
+          "docs": "Get intelligence classifiers for all feeds"
+        },
+        {
+          "info": {
+            "name": "The user's classifiers for a feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/classifier/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "The user's classifiers for a feed"
+        },
+        {
+          "info": {
+            "name": "Update training preferences (classifiers)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/classifier/save"
+          },
+          "docs": "Update training preferences (classifiers)"
+        },
+        {
+          "info": {
+            "name": "Blurblog intelligence classifiers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/social/feed_trainer"
+          },
+          "docs": "Blurblog intelligence classifiers"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

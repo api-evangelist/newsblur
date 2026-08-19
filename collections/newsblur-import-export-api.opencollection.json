@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NewsBlur authentication import-export API",
+    "version": "2026.07"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "newsblur_sessionid",
+      "value": "{{newsblur_sessionid}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "import-export",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Download subscriptions as an OPML backup",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/import/opml_export"
+          },
+          "docs": "Download subscriptions as an OPML backup"
+        },
+        {
+          "info": {
+            "name": "Upload an OPML file to import subscriptions",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://www.newsblur.com/import/opml_upload"
+          },
+          "docs": "Upload an OPML file to import subscriptions"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

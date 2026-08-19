@@ -1,0 +1,373 @@
+{
+  "item": [
+    {
+      "id": "44765449-c73f-415b-af0f-30b511a807fb",
+      "name": "classifiers",
+      "description": {
+        "content": "Intelligence training classifiers.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "87cbc121-1eed-4d20-888d-d45f5fbb44d9",
+          "name": "Get intelligence classifiers for all feeds",
+          "request": {
+            "name": "Get intelligence classifiers for all feeds",
+            "description": {},
+            "url": {
+              "path": [
+                "reader",
+                "feeds_trainer"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9bae982d-34cc-4f73-a81b-f5599a843330",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reader",
+                    "feeds_trainer"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c47fdec6-c2a8-46ac-ac65-9db5c59e4da5",
+          "name": "The user's classifiers for a feed",
+          "request": {
+            "name": "The user's classifiers for a feed",
+            "description": {},
+            "url": {
+              "path": [
+                "classifier",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "011395f1-97a0-4fdb-8150-1cc0912fefda",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "classifier",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f21076e6-5da8-40a6-b5c7-5722122ca4af",
+          "name": "Update training preferences (classifiers)",
+          "request": {
+            "name": "Update training preferences (classifiers)",
+            "description": {},
+            "url": {
+              "path": [
+                "classifier",
+                "save"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0fae5ee5-f111-4aab-b216-a88ce01af9cf",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "classifier",
+                    "save"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "991cad75-dde6-4580-89a2-e06397311b0e",
+          "name": "Blurblog intelligence classifiers",
+          "request": {
+            "name": "Blurblog intelligence classifiers",
+            "description": {},
+            "url": {
+              "path": [
+                "social",
+                "feed_trainer"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "21698bda-300a-4d3e-9f9b-7d3d8f2d60f5",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "social",
+                    "feed_trainer"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.newsblur.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "newsblur_sessionid"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "0a05f813-6c07-4cb8-ad8e-5be04b73d74c",
+    "name": "NewsBlur authentication classifiers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "NewsBlur is a personal news reader (RSS/Atom aggregator) that brings people together to talk about the world. The HTTP API exposes account, feed, story, social (\"blurblog\"), intelligence-classifier, and OPML import/export operations. This OpenAPI description was generated by API Evangelist from the publicly documented endpoint reference at https://www.newsblur.com/api and the open-source NewsBlur codebase (github.com/samuelclay/NewsBlur). It is a faithful structuring of the documented surface, not a provider-published spec.\n\nContact Support:\n Name: NewsBlur\n Email: samuel@newsblur.com",
+      "type": "text/plain"
+    }
+  }
+}

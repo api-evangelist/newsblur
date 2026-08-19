@@ -1,0 +1,940 @@
+{
+  "item": [
+    {
+      "id": "72ccf939-76fc-41d4-9b4f-86d4d2bf26b7",
+      "name": "feed-management",
+      "description": {
+        "content": "Subscriptions, folders and organization.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "88995ca0-2c46-4b46-ac9a-27574a5b5730",
+          "name": "Subscribe to a feed or website URL",
+          "request": {
+            "name": "Subscribe to a feed or website URL",
+            "description": {},
+            "url": {
+              "path": [
+                "reader",
+                "add_url"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f73a9334-33e5-4eac-afee-fe4d783b3bcb",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reader",
+                    "add_url"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "33866711-ca7c-425d-9ac0-2d321901a4b5",
+              "name": "Invalid request.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reader",
+                    "add_url"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c4bc3ad2-346a-4aa4-9bf2-4fb8b74894ce",
+          "name": "Create a folder",
+          "request": {
+            "name": "Create a folder",
+            "description": {},
+            "url": {
+              "path": [
+                "reader",
+                "add_folder"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "88e52180-5e28-4ba2-a6f7-dfa2d714b827",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reader",
+                    "add_folder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c7def757-4fa6-4bfd-85f7-fdf3e40e369d",
+          "name": "Move a feed to a folder",
+          "request": {
+            "name": "Move a feed to a folder",
+            "description": {},
+            "url": {
+              "path": [
+                "reader",
+                "move_feed_to_folder"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d92841e7-33f2-488d-9aed-dfb2eff9da23",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reader",
+                    "move_feed_to_folder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "17f0feb8-d203-470f-a112-bd6da88e4b36",
+          "name": "Move a folder into another folder",
+          "request": {
+            "name": "Move a folder into another folder",
+            "description": {},
+            "url": {
+              "path": [
+                "reader",
+                "move_folder_to_folder"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cdc360bb-9a1a-49f8-9625-4c5000a638f1",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reader",
+                    "move_folder_to_folder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "73629e25-fa11-4c73-8081-0637fe3708a0",
+          "name": "Rename a feed",
+          "request": {
+            "name": "Rename a feed",
+            "description": {},
+            "url": {
+              "path": [
+                "reader",
+                "rename_feed"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f8fe92e6-122e-4fc2-be8d-39522791f22f",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reader",
+                    "rename_feed"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "18028373-1f01-4e60-acbd-afb52424139c",
+          "name": "Rename a folder",
+          "request": {
+            "name": "Rename a folder",
+            "description": {},
+            "url": {
+              "path": [
+                "reader",
+                "rename_folder"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a3632889-9fba-4166-82ca-a49bd27dac0d",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reader",
+                    "rename_folder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "15e57f7b-cacd-42ec-a21d-8ef7baf70516",
+          "name": "Unsubscribe from a feed",
+          "request": {
+            "name": "Unsubscribe from a feed",
+            "description": {},
+            "url": {
+              "path": [
+                "reader",
+                "delete_feed"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e47b9c68-8da7-41d8-9cfb-2b8aede77ce7",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reader",
+                    "delete_feed"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "02350c25-d6d8-40cd-8b50-a1f5cdbf3539",
+          "name": "Delete a folder and unsubscribe its feeds",
+          "request": {
+            "name": "Delete a folder and unsubscribe its feeds",
+            "description": {},
+            "url": {
+              "path": [
+                "reader",
+                "delete_folder"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9857e6bc-cbc8-4638-aba2-1f60658c4773",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reader",
+                    "delete_folder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "57e09e2e-4d29-401e-a824-343fde16e691",
+          "name": "Reorder feeds and folders",
+          "request": {
+            "name": "Reorder feeds and folders",
+            "description": {},
+            "url": {
+              "path": [
+                "reader",
+                "save_feed_order"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8ed6ac93-29a0-437e-b100-ad0e1baeab86",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reader",
+                    "save_feed_order"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5a234ffd-4085-474d-9e03-e8f7a81b13ea",
+          "name": "Create a saved-search shortcut",
+          "request": {
+            "name": "Create a saved-search shortcut",
+            "description": {},
+            "url": {
+              "path": [
+                "reader",
+                "save_search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "764dca12-fd0c-424a-8c7e-dc7099758782",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reader",
+                    "save_search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9bf3d231-17b4-4a4c-93e2-6cb3c75e310e",
+          "name": "Remove a saved-search shortcut",
+          "request": {
+            "name": "Remove a saved-search shortcut",
+            "description": {},
+            "url": {
+              "path": [
+                "reader",
+                "delete_search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "70855b08-106d-424b-a994-78d9fc7ca753",
+              "name": "Success. NewsBlur returns a JSON object; most responses include a `result` field (\"ok\" or \"error\").",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reader",
+                    "delete_search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "newsblur_sessionid",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.newsblur.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "newsblur_sessionid"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "6a565b5c-ba57-40a5-8130-5c620442164d",
+    "name": "NewsBlur authentication feed-management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "NewsBlur is a personal news reader (RSS/Atom aggregator) that brings people together to talk about the world. The HTTP API exposes account, feed, story, social (\"blurblog\"), intelligence-classifier, and OPML import/export operations. This OpenAPI description was generated by API Evangelist from the publicly documented endpoint reference at https://www.newsblur.com/api and the open-source NewsBlur codebase (github.com/samuelclay/NewsBlur). It is a faithful structuring of the documented surface, not a provider-published spec.\n\nContact Support:\n Name: NewsBlur\n Email: samuel@newsblur.com",
+      "type": "text/plain"
+    }
+  }
+}

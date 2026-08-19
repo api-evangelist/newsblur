@@ -1,0 +1,131 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NewsBlur authentication feeds API",
+    "version": "2026.07"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "newsblur_sessionid",
+      "value": "{{newsblur_sessionid}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "feeds",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Find a feed by its address",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/rss_feeds/search_feed",
+            "params": [
+              {
+                "name": "address",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Find a feed by its address"
+        },
+        {
+          "info": {
+            "name": "Search feeds by term",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/rss_feeds/feed_autocomplete",
+            "params": [
+              {
+                "name": "term",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search feeds by term"
+        },
+        {
+          "info": {
+            "name": "List the user's subscriptions with unread counts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/reader/feeds"
+          },
+          "docs": "List the user's subscriptions with unread counts"
+        },
+        {
+          "info": {
+            "name": "Retrieve feed favicons",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/reader/favicons"
+          },
+          "docs": "Retrieve feed favicons"
+        },
+        {
+          "info": {
+            "name": "Get current unread counts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/reader/refresh_feeds"
+          },
+          "docs": "Get current unread counts"
+        },
+        {
+          "info": {
+            "name": "Original page from a feed",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/reader/page/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Original page from a feed"
+        },
+        {
+          "info": {
+            "name": "Feed statistics and history",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://www.newsblur.com/rss_feeds/statistics/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Feed statistics and history"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
