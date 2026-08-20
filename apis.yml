@@ -42,6 +42,17 @@ tags:
 - Social
 - Content
 - Media
+- Open-Source
+- MCP
+tags_raw:
+- Company
+- RSS
+- News
+- Feed Reader
+- Aggregator
+- Social
+- Content
+- Media
 - Open Source
 - MCP
 apis:
@@ -51,6 +62,8 @@ apis:
   humanURL: https://www.newsblur.com/api
   baseURL: https://www.newsblur.com
   tags:
+  - Authentication
+  tags_raw:
   - authentication
   properties:
   - type: OpenAPI
@@ -71,6 +84,8 @@ apis:
   humanURL: https://www.newsblur.com/api
   baseURL: https://www.newsblur.com
   tags:
+  - Classifiers
+  tags_raw:
   - classifiers
   properties:
   - type: OpenAPI
@@ -91,6 +106,8 @@ apis:
   humanURL: https://www.newsblur.com/api
   baseURL: https://www.newsblur.com
   tags:
+  - Feed Management
+  tags_raw:
   - feed-management
   properties:
   - type: OpenAPI
@@ -111,6 +128,8 @@ apis:
   humanURL: https://www.newsblur.com/api
   baseURL: https://www.newsblur.com
   tags:
+  - Feeds
+  tags_raw:
   - feeds
   properties:
   - type: OpenAPI
@@ -131,6 +150,8 @@ apis:
   humanURL: https://www.newsblur.com/api
   baseURL: https://www.newsblur.com
   tags:
+  - Import Export
+  tags_raw:
   - import-export
   properties:
   - type: OpenAPI
@@ -151,6 +172,8 @@ apis:
   humanURL: https://www.newsblur.com/api
   baseURL: https://www.newsblur.com
   tags:
+  - Social
+  tags_raw:
   - social
   properties:
   - type: OpenAPI
@@ -171,6 +194,8 @@ apis:
   humanURL: https://www.newsblur.com/api
   baseURL: https://www.newsblur.com
   tags:
+  - Stories
+  tags_raw:
   - stories
   properties:
   - type: OpenAPI
