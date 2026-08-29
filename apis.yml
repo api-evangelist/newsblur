@@ -9,6 +9,18 @@ description: >-
   runs native iOS, macOS and Android apps, and exposes a documented HTTP API plus an
   official hosted Model Context Protocol (MCP) server at newsblur.com/mcp for AI agents.
   This profile captures NewsBlur's public API surface for the API Evangelist network.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
