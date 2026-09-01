@@ -96,7 +96,7 @@ apis:
   humanURL: https://www.newsblur.com/api
   baseURL: https://www.newsblur.com
   tags:
-  - classifiers
+  - Classifiers
   tags_raw:
   - classifiers
   properties:
@@ -118,7 +118,7 @@ apis:
   humanURL: https://www.newsblur.com/api
   baseURL: https://www.newsblur.com
   tags:
-  - feed-management
+  - Feed Management
   tags_raw:
   - feed-management
   properties:
@@ -162,7 +162,7 @@ apis:
   humanURL: https://www.newsblur.com/api
   baseURL: https://www.newsblur.com
   tags:
-  - import-export
+  - Import Export
   tags_raw:
   - import-export
   properties:
@@ -184,7 +184,7 @@ apis:
   humanURL: https://www.newsblur.com/api
   baseURL: https://www.newsblur.com
   tags:
-  - social
+  - Social
   tags_raw:
   - social
   properties:
@@ -206,7 +206,7 @@ apis:
   humanURL: https://www.newsblur.com/api
   baseURL: https://www.newsblur.com
   tags:
-  - stories
+  - Stories
   tags_raw:
   - stories
   properties:
