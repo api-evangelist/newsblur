@@ -224,6 +224,8 @@ apis:
   - type: Conformance
     url: conformance/newsblur-conformance.yml
 common:
+- type: Website
+  url: https://www.newsblur.com/
 - type: DeveloperPortal
   url: https://www.newsblur.com/api
 - type: Documentation
