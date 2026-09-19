@@ -141,7 +141,7 @@ apis:
   humanURL: https://www.newsblur.com/api
   baseURL: https://www.newsblur.com
   tags:
-  - Feeds
+  - Feed
   tags_raw:
   - feeds
   properties:
