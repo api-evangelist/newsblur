@@ -1,13 +1,7 @@
 {
   "provider": "newsblur",
   "sources": [
-    "newsblur-authentication-api-openapi.yml",
-    "newsblur-classifiers-api-openapi.yml",
-    "newsblur-feed-management-api-openapi.yml",
-    "newsblur-feeds-api-openapi.yml",
-    "newsblur-import-export-api-openapi.yml",
-    "newsblur-social-api-openapi.yml",
-    "newsblur-stories-api-openapi.yml"
+    "_original/newsblur-openapi.yml"
   ],
   "outputs": [
     "newsblur-authentication-api-openapi.yml",
@@ -21,6 +15,18 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "newsblur-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "newsblur-authentication-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "newsblur-classifiers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "newsblur-feed-management-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "newsblur-feeds-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "newsblur-import-export-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "newsblur-social-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "newsblur-stories-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

@@ -1,0 +1,1 @@
+{"resource": "https://newsblur.com/mcp", "authorization_servers": ["https://newsblur.com/mcp"], "scopes_supported": ["read", "write", "mcp"]}
