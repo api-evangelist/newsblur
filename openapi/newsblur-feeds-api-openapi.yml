@@ -122,14 +122,14 @@ components:
         application/json:
           schema:
             type: object
-    Unauthorized:
-      description: Authentication required or invalid credentials.
+    Ok:
+      description: Success. NewsBlur returns a JSON object; most responses include a `result` field ("ok" or "error").
       content:
         application/json:
           schema:
             type: object
-    Ok:
-      description: Success. NewsBlur returns a JSON object; most responses include a `result` field ("ok" or "error").
+    Unauthorized:
+      description: Authentication required or invalid credentials.
       content:
         application/json:
           schema:

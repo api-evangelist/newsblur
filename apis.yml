@@ -55,7 +55,7 @@ tags:
 - Social
 - Content
 - Media
-- Open-Source
+- Open Source
 - MCP
 tags_raw:
 - Company
@@ -68,12 +68,12 @@ tags_raw:
 - Media
 - Open Source
 - MCP
+- Open-Source
 apis:
 - aid: newsblur:newsblur-authentication-api
-  name: NewsBlur authentication API
+  name: NewsBlur Authentication API
   description: Login, logout and signup.
   humanURL: https://www.newsblur.com/api
-  baseURL: https://www.newsblur.com
   tags:
   - Authentication
   tags_raw:
@@ -92,10 +92,9 @@ apis:
   - type: Conformance
     url: conformance/newsblur-conformance.yml
 - aid: newsblur:newsblur-classifiers-api
-  name: NewsBlur classifiers API
+  name: NewsBlur Classifiers API
   description: Intelligence training classifiers.
   humanURL: https://www.newsblur.com/api
-  baseURL: https://www.newsblur.com
   tags:
   - Classifiers
   tags_raw:
@@ -114,10 +113,9 @@ apis:
   - type: Conformance
     url: conformance/newsblur-conformance.yml
 - aid: newsblur:newsblur-feed-management-api
-  name: NewsBlur feed-management API
+  name: NewsBlur Feed Management API
   description: Subscriptions, folders and organization.
   humanURL: https://www.newsblur.com/api
-  baseURL: https://www.newsblur.com
   tags:
   - Feed Management
   tags_raw:
@@ -136,10 +134,9 @@ apis:
   - type: Conformance
     url: conformance/newsblur-conformance.yml
 - aid: newsblur:newsblur-feeds-api
-  name: NewsBlur feeds API
+  name: NewsBlur Feeds API
   description: Feed subscription, search and metadata.
   humanURL: https://www.newsblur.com/api
-  baseURL: https://www.newsblur.com
   tags:
   - Feed
   tags_raw:
@@ -158,10 +155,9 @@ apis:
   - type: Conformance
     url: conformance/newsblur-conformance.yml
 - aid: newsblur:newsblur-import-export-api
-  name: NewsBlur import-export API
+  name: NewsBlur Import Export API
   description: OPML import and export.
   humanURL: https://www.newsblur.com/api
-  baseURL: https://www.newsblur.com
   tags:
   - Import Export
   tags_raw:
@@ -180,10 +176,9 @@ apis:
   - type: Conformance
     url: conformance/newsblur-conformance.yml
 - aid: newsblur:newsblur-social-api
-  name: NewsBlur social API
+  name: NewsBlur Social API
   description: Blurblogs, sharing, following and comments.
   humanURL: https://www.newsblur.com/api
-  baseURL: https://www.newsblur.com
   tags:
   - Social
   tags_raw:
@@ -202,10 +197,9 @@ apis:
   - type: Conformance
     url: conformance/newsblur-conformance.yml
 - aid: newsblur:newsblur-stories-api
-  name: NewsBlur stories API
+  name: NewsBlur Stories API
   description: Reading, marking and starring stories.
   humanURL: https://www.newsblur.com/api
-  baseURL: https://www.newsblur.com
   tags:
   - Stories
   tags_raw:
