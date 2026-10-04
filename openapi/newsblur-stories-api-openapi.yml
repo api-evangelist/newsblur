@@ -184,14 +184,14 @@ paths:
           $ref: '#/components/responses/Ok'
 components:
   responses:
-    NotFound:
-      description: Resource not found.
+    Ok:
+      description: Success. NewsBlur returns a JSON object; most responses include a `result` field ("ok" or "error").
       content:
         application/json:
           schema:
             type: object
-    Ok:
-      description: Success. NewsBlur returns a JSON object; most responses include a `result` field ("ok" or "error").
+    NotFound:
+      description: Resource not found.
       content:
         application/json:
           schema:
