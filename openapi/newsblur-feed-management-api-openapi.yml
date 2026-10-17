@@ -124,14 +124,14 @@ paths:
           $ref: '#/components/responses/Ok'
 components:
   responses:
-    BadRequest:
-      description: Invalid request.
+    Ok:
+      description: Success. NewsBlur returns a JSON object; most responses include a `result` field ("ok" or "error").
       content:
         application/json:
           schema:
             type: object
-    Ok:
-      description: Success. NewsBlur returns a JSON object; most responses include a `result` field ("ok" or "error").
+    BadRequest:
+      description: Invalid request.
       content:
         application/json:
           schema:

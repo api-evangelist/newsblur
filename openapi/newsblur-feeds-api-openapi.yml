@@ -116,8 +116,8 @@ paths:
           $ref: '#/components/responses/NotFound'
 components:
   responses:
-    Unauthorized:
-      description: Authentication required or invalid credentials.
+    NotFound:
+      description: Resource not found.
       content:
         application/json:
           schema:
@@ -128,8 +128,8 @@ components:
         application/json:
           schema:
             type: object
-    NotFound:
-      description: Resource not found.
+    Unauthorized:
+      description: Authentication required or invalid credentials.
       content:
         application/json:
           schema:
